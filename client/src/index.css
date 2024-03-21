@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+body { 
+  margin: 0px;
+  font-family: Roboto Slab;
+  text-align: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout {
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Estilos navBar */
+
+.nav {
+
+  display: flex;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(27,26,147,1) 100%, rgba(32,32,171,1) 100%);
+  width: 100%;
+  justify-content: center;   
+}
+
+.nav > ul {
+  display: flex;
+  list-style: none;
+
+}
+
+.nav li {
+   padding: 10px; 
+}
+.nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;   
+  font-weight: lighter;
+  font-size: 20px;
+  transition: all 300ms;
+}
+.nav a:hover{
+  transform: scale(1.1, 1.1);
+}
+.nav a svg {
+  margin-top: 2px;
+}
+
+/*ESTILOS PARA EL CONTENIDO PRINCIPAL*/
+
+.home-listado{
+  width: 100%; 
+}
+.dune{/* IMAGEN DUNE PRINCIPAl */
+
+  margin-bottom: 170px;
+  max-width: 100%; 
+  height: auto;
+}
+
+.titles-buttons{
+  margin-bottom: 50px;
+}
+
+.div-listado{/* LISTADO MOVIES */
+  margin-top: 50px;
+  margin-bottom: 50px ;
+}
+
+.div-carrousel{/* LISTADO HOME */
+  margin: 100px;
+}
+
+.white{
+  color:white;
+}
+
+.ul-style { /*LISTA MOVIES, TV SHOWs */
+  list-style-type: none;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 50px; 
+}
+
+.img-style { /* IMAGEN CARROUSEL , MOVIES Y TVSHOWS*/
+  width: 200px;
+  margin: 15px;
+  transition: transform .2s;
+}
+
+.img-style:hover {
+  transform: scale(1.05);
+}
+
+.img-text {
+  transition: opacity 0.3s;
+  opacity: 0;
+  font-size: 15px; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+  white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+  overflow: hidden; /* Oculta cualquier parte del texto que desborde del contenedor */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto que se recorta */
+}
+
+
+.img-container:hover .img-text {
+  opacity: 1;
+}
+
+
+
+
+/* BOTONES */
+.button{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px;
+}
+
+.button:hover{
+  transform: scale(1.05);
+}
+
+.reveal{ /*ANIMACION REVELAR HOME*/
+  animation: reveal linear both; 
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+ /*ANIMACION REVELAR HOME*/
+@keyframes reveal {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+  /*ESTILOS PARA EL PIE DE PAGINA*/
+.footer {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(27,26,147,1) 100%, rgba(32,32,171,1) 100%);
+  text-align: left;
+  line-height: 68px;
+  padding-left: 25px;
+  color: aliceblue;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+}
+
+.footer h3 {
+  margin-right: 20px; 
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-top: 10px;
+  margin-right: 10px; /* Ajusta el espacio entre los iconos */
+  vertical-align: middle; /* Alinea verticalmente los iconos */
+}
+
+.footer ul li svg {
+  font-size: 24px; /* Tamaño de los iconos */
+}
+
+
+/* REGISTER- LOGIN */
+.container {
+  background-color:aliceblue;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 80vh; /* Toma el 100% de la altura de la ventana */
+}
+
+.form {
+  background-color: aliceblue;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 30%;
+  
+}
+
+.form h1 {
+  margin-top: 0;
+}
+
+.form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+label {
+  width: 100px; /* Establece el ancho fijo para las etiquetas */
+  margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+}
+
+input[type=email], [type=password], [type=text], select {
+  flex: 1; /* El campo de entrada ocupará todo el espacio disponible */
+  padding: 12px 20px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 650px) {
+  .nav > ul li a{
+    display: none;
+  } 
+  .h1-text{
+    display: none;
+  }
+  .reveal {
+    animation: none; /* Anula la animación */
+  }
+  .div-carrousel{
+    margin: 0px;
+  }
+}
