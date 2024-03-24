@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import '../../../index.css';
+import '../../index.css';
 
 
-export const ListadoTvShows = () => {
+export const TvShows = () => {
 
   const [tvShows, setTvShows] = useState([]);
   const [opcion, setOpcion] = useState('trending')
@@ -77,4 +77,3 @@ export const ListadoTvShows = () => {
     </div>
   );
 };
-

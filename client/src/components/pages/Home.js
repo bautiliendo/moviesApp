@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import '../../../index.css';
-import { Carrousel } from '../../common/Carrousel';
-import imagen from '../../../imgs/dune_part_two_ver21_xxlg.jpg'
+import '../../index.css';
+import { Carrousel } from '../common/Carrousel';
+import imagen from '../../imgs/dune_part_two_ver21_xxlg.jpg'
 
 
-export const Listado = () => {
+export const Home = () => {
   const [peliculas, setPeliculas] = useState([]); // Estado para almacenar las películas
   const [opcion, setOpcion] = useState('hoy'); // Estado para almacenar la opción seleccionada
 

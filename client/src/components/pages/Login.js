@@ -24,7 +24,7 @@ export const Login = () => {
       } else {
         setData({})
         toast.success('Login succesful. Welcome! ')
-        navigate('/dashboard')
+        navigate('/')
       }
     } catch (error) {
       

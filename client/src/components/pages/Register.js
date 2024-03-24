@@ -23,7 +23,7 @@ export const Register = () => {
         toast.error(data.error)
       } else {
         setData({})
-        toast.success('Register succesful. Welcome! ')
+        toast.success('Register succesful')
         navigate('/login')
       }
     } catch (error) {

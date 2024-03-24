@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../../../index.css';
+import '../../index.css';
 
-export const ListadoMovies = () => {
-
+export const Movies = () => {
   const [peliculas, setPeliculas] = useState([]); 
   const [opcion, setOpcion] = useState('popular'); 
 
@@ -46,7 +45,6 @@ export const ListadoMovies = () => {
         .catch(err => console.error(err));
     };
 
-
   return (
     <div>
       <div className='div-listado'>
@@ -77,3 +75,4 @@ export const ListadoMovies = () => {
     </div>
   )
 }
+
