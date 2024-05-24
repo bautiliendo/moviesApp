@@ -68,8 +68,9 @@ body {
 }
 
 .div-listado{/* LISTADO MOVIES */
-  margin-top: 50px;
-  margin-bottom: 50px ;
+  display: flex;
+  place-items: center;
+  justify-content: center;
 }
 
 .div-carrousel{/* LISTADO HOME */
@@ -128,7 +129,7 @@ body {
 }
 
 .button:hover{
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .reveal{ /*ANIMACION REVELAR HOME*/
